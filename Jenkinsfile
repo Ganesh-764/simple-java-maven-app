@@ -52,13 +52,13 @@ pipeline {
 //       steps {
 //         sh 'ansible-playbook deploy.yml --extra-vars="buildNumber=$BUILD_NUMBER"'
 //       }   
-//     }  
-}
-post {
-     always {
-       emailext to: 'nammimahesh01@gmail.com',
-       attachLog: true, body: "Dear team pipeline is ${currentBuild.result} please check ${BUILD_URL} or PFA build log", compressLog: false,
-       subject: "Jenkins Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}"
-    }
-}
-}
+//    }  
+// }
+// post {
+//      always {
+//        emailext to: 'nammimahesh01@gmail.com',
+//        attachLog: true, body: "Dear team pipeline is ${currentBuild.result} please check ${BUILD_URL} or PFA build log", compressLog: false,
+//        subject: "Jenkins Build Notification: ${JOB_NAME}-Build# ${BUILD_NUMBER} ${currentBuild.result}"
+//     }
+// }
+// }
